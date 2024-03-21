@@ -108,14 +108,7 @@ export async function confirmBooking(req, res) {
       throw new BadRequestError("This is not your service");
     }
 
-    if (
-      [
-        "COMPLETED",
-        "CUSTOMER_CANCELED",
-        "PROFESSIONAL_CANCELLED",
-        "CUSTOMER_CANCELED",
-      ].includes(booking.status)
-    ) {
+    if (booking.status !== "PENDING") {
       throw new BadRequestError("This booking  can not  be Confirmed");
     }
 
@@ -154,14 +147,7 @@ export async function completeBooking(req, res) {
       throw new BadRequestError("This is not your service");
     }
 
-    if (
-      [
-        "PENDING",
-        "CUSTOMER_CANCELED",
-        "PROFESSIONAL_CANCELLED",
-        "CUSTOMER_CANCELED",
-      ].includes(booking.status)
-    ) {
+    if (booking.status !== "CONFIRMED") {
       throw new BadRequestError("This booking  can not  be Completed");
     }
 

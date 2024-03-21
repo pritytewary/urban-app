@@ -149,14 +149,7 @@ export async function servicechangeBooking(req, res) {
     if (!booking) {
       throw new NotFoundError("Not Found");
     }
-    if (
-      [
-        "COMPLETED",
-        "CONFIRMED",
-        "PROFESSIONAL_CANCELLED",
-        "CUSTOMER_CANCELED",
-      ].includes(booking.status)
-    ) {
+    if (booking.status !== "PENDING") {
       throw new BadRequestError("This booking can't be date change");
     }
 

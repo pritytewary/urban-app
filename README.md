@@ -1,3 +1,28 @@
+# This is an Urban Api
+
+### Dependencies
+
+##### Express ,Mongoose,jwt,bcryptjs,dotenv
+
+1. Express Install Process
+
+- npm init -y
+- npm install express
+
+2. Mongoose install Process
+
+- npm install mongoose
+
+## Run the Server
+
+###### npm run dev
+
+##### open browser type "http//localhost8080
+
+#### Learn more https://expressjs.com/
+
+#### Routes
+
 ### Customer
 
 - [x] `/customer/register` - POST
@@ -21,3 +46,18 @@
 - [x] `/professional/bookings/[id]/approve` - POST - Approve, Cancel, Complete
 - [x] `/professional/bookings/[id]/cancel` - POST - Approve, Cancel, Complete
 - [x] `/professional/bookings/[id]/completed` - POST - Approve, Cancel, Complete
+
+---
+
+### In this Routes what you can do
+
+- Customer can register and login with token
+- Customer can book a Service
+- Customer can cancel a booking
+- Customer can change a Service date
+- Cusomer can update a Service
+- Professional can register and login with token
+- Professional can add a Service
+- Professional get all bookings
+- professional can cancel a booking
+- Professional can confirm a booking
